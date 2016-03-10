@@ -11,6 +11,17 @@
  * result in true.
  */
 function validateGameType(gameTypeString) {
+	if (typeof gameTypeString !== 'string'){
+			return false;
+		} 
+
+		if ((gameTypeString === '1') || (gameTypeString.toLowerCase() === 'one')) {
+        return 1;
+    }    else if ((gameTypeString === '2') || (gameTypeString.toLowerCase() === 'two')) {
+        return 2;
+    }    else {
+        return false;
+    }
 
 }
 
@@ -20,14 +31,17 @@ function validateGameType(gameTypeString) {
  * false if the name is not valid.
  */
 function validateName(name) {
-
+	else if (name == 'abc'); {
+        return name;
+    }
 }
 
 /*
  * Randomly generates and returns a name for a computer player.
  */
 function generateComputerName() {
-
+ var computerName = ['Arnold', 'Batman', 'Bob', 'John', 'Mark'];
+    return computerName[Math.round((Math.random()*4))];
 }
 
 /*
@@ -38,6 +52,19 @@ function generateComputerName() {
  * insensitive, so it should accept both 'Y' and 'y' for example.
  */
 function validateYesNo(yesNoString) {
+	
+	yesNoString = yesNoString.toUpperCase();
+
+if(yesNoString === ‘y’ || yesNoString === ‘yes’); 
+        { return true; }
+
+    if(yesNoString ===’n || yesNoString ===’no); {
+
+return false;
+        }
+else { 
+
+return null;
 
 }
 
@@ -47,6 +74,13 @@ function validateYesNo(yesNoString) {
  * 'O' and vice versa.
  */
 function getNextPlayer(currentPlayer) {
+   
+	getNextPlayer = getNextPlayer.toUpperCase();
+   if(currentPlayer === ‘X’) {
+return currentplayer = ‘O’;
+	if(currentPlayer === ‘O’) {
+return currentplayer = ‘X’;
+
 
 }
 
@@ -69,7 +103,7 @@ function getNextPlayer(currentPlayer) {
  *   ~~~~~~~~~~~~~
  */
 function getGameBoardString(gameBoard) {
-
+	return ['', 'X', '','', 'X', '','', 'X', ''],
 }
 
 /*

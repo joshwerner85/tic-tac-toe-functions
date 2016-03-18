@@ -10,19 +10,7 @@
  * The function should be case insensitive, so 'one' and 'ONE' should both
  * result in true.
  */
-
 function validateGameType(gameTypeString) {
-	if (typeof gameTypeString !== 'string'){
-			return false;
-		} 
-
-		if ((gameTypeString === '1') || (gameTypeString.toLowerCase() === 'one')) {
-        return 1;
-    }    else if ((gameTypeString === '2') || (gameTypeString.toLowerCase() === 'two')) {
-        return 2;
-    }    else {
-        return false;
-    }
 
 }
 
@@ -32,20 +20,14 @@ function validateGameType(gameTypeString) {
  * false if the name is not valid.
  */
 function validateName(name) {
-	if (typeof name === 'abc' || typeof name === 'object' || name === '') {
-		return false
-	} else{
-        return name;
-	}
-    
+
 }
 
 /*
  * Randomly generates and returns a name for a computer player.
  */
 function generateComputerName() {
- var computerName = ['Arnold', 'Batman', 'Bob', 'John', 'Mark'];
-    return computerName[Math.round((Math.random()*4))];
+
 }
 
 /*
@@ -56,19 +38,6 @@ function generateComputerName() {
  * insensitive, so it should accept both 'Y' and 'y' for example.
  */
 function validateYesNo(yesNoString) {
-	
-	yesNoString = yesNoString.toUpperCase();
-
-if(yesNoString === ‘y’ || yesNoString === ‘yes’); 
-        { return true; }
-
-    if(yesNoString ===’n || yesNoString ===’no); {
-
-return false;
-        }
-else { 
-
-return null;
 
 }
 
@@ -78,13 +47,6 @@ return null;
  * 'O' and vice versa.
  */
 function getNextPlayer(currentPlayer) {
-   
-	var getNextPlayer = getNextPlayer.toUpperCase();
-   if(currentPlayer === ‘X’) {
-return currentplayer = ‘O’;
-	if(currentPlayer === ‘O’) {
-return currentplayer = ‘X’;
-
 
 }
 
@@ -107,7 +69,6 @@ return currentplayer = ‘X’;
  *   ~~~~~~~~~~~~~
  */
 function getGameBoardString(gameBoard) {
-	return '     1   2   3 \n  ~~~~~~~~~~~~~\n1 | '+ gameBoard[0][0] +' | '+ gameBoard[0][1] +' | '+ gameBoard[0][2] +' |\n  ~~~~~~~~~~~~~\n2 | '+ gameBoard[1][0] +' | '+ gameBoard[1][1] +' | '+ gameBoard[1][2] +' |\n  ~~~~~~~~~~~~~\n3 | '+ gameBoard[2][0] +' | '+ gameBoard[2][1] +' | '+ gameBoard[2][2] +' |\n  ~~~~~~~~~~~~~\n';
 
 }
 
@@ -117,15 +78,7 @@ function getGameBoardString(gameBoard) {
  * For example, the game board might be 3x3, 4x4, or 5x7.
  */
 function getEmptySpaceCount(gameBoard) {
-    var emptySpaces = 0;
-    for (var i = 0; i < gameBoard.length; i++) {
-        for (var j = 0; j < gameBoard[i].length; j++) {
-            if (gameBoard[i][j] === ' ') {
-                emptySpaces++;
-            }
-        }
-    }
-    return emptySpaces;
+
 }
 
 
